@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/verde_intro"
+    tools:context="com.lab4.ecobicis.MainActivity">
+      
+	<LinearLayout 
+	    android:orientation="vertical"
+	    android:background="@color/verde_intro"
+	    android:layout_width="fill_parent"
+	    android:layout_height="match_parent">
+	    
+	    <TextView 
+	        android:id="@+id/titulo"
+	        android:textSize="30sp"
+	        android:layout_height="wrap_content"
+	        android:layout_width="fill_parent"
+	        android:textColor="@color/verde_oscuro"
+	        android:gravity="center_horizontal"
+	        android:text="ECOBICIS"
+	        />
+	    
+	    <ImageView
+	        android:id="@+id/img_intro"
+	        android:layout_width="fill_parent"
+	        android:layout_height="180sp"
+	        android:layout_margin="10dp"
+	        android:src="@drawable/ini"
+	        />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Nombre de Usuario:"
+	        android:textSize="16dp"/>
+	    
+	    <EditText
+	        android:id="@+id/usernameField"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="text"
+	        android:nextFocusDown="@+id/passField"
+	        />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Contraseña:"
+	        android:textSize="16dp"/>
+	    
+	    <EditText
+	        android:id="@+id/passField"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:inputType="textPassword"
+	        android:nextFocusDown="@+id/btnIngreso"
+	        />
+	    
+	    <Button 
+	        android:id="@+id/btnIngreso"
+	        android:gravity="center_horizontal"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Ingresar"
+	        android:onClick="login"/>
+	        
+	</LinearLayout>
+    
+</RelativeLayout>

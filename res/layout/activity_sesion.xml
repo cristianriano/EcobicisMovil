@@ -1,0 +1,190 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/verde_intro"
+    tools:context="com.lab4.ecobicis.SesionActivity" >
+    
+    <TextView android:id="@+id/msjBienvenido"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text=" "
+	        android:textSize="16dp"/>
+    
+    <!--  <ScrollView android:layout_width="fill_parent"
+        	android:layout_height="fill_parent">-->
+        	
+        <LinearLayout android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:orientation="vertical">
+        	
+            <Button android:id="@+id/btnMapa"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:text="Mapa"
+	    	/>
+	
+			<LinearLayout android:id="@+id/panelMapa"
+			    		android:layout_width="fill_parent"
+			    		android:layout_height="wrap_content"
+			    		android:orientation="vertical">
+			    		
+					<fragment android:id="@+id/map"
+					          android:layout_width="match_parent"
+					          android:layout_height="match_parent"
+					          android:layout_margin="16dp"
+					          android:name="com.google.android.gms.maps.SupportMapFragment"/>			    
+			</LinearLayout>
+			
+			<Button android:id="@+id/btnReserva"
+			    	android:layout_width="fill_parent"
+			    	android:layout_height="wrap_content"
+			    	android:text="Reservar"
+			    	/>
+		    
+		    <LinearLayout android:id="@+id/panelReserva"
+			    		android:layout_width="fill_parent"
+			    		android:layout_height="wrap_content"
+			    		android:orientation="vertical">
+					
+		        	<TextView android:id="@+id/msjReserva"
+		        	    	android:layout_width="wrap_content"
+		        	    	android:layout_height="wrap_content"
+		        	    	android:text="Presione la estacion en la que desea reservar"/>
+		        	
+		        	<ListView android:id="@+id/lista"
+		        	    	android:layout_width="fill_parent"
+		        	    	android:layout_height="wrap_content"/>"
+		        	    	
+		        	<Button android:id="@+id/btnCancelar"
+		        	    	android:text="Cancelar reserva"
+		        	    	android:layout_height="wrap_content"
+		        	    	android:layout_width="wrap_content"
+		        	    	android:layout_gravity="center_horizontal"
+		        	    	android:background="@color/silver"
+		        	    	android:layout_margin="5dp"
+		       	    		android:padding="10dp"/>
+		        
+		    </LinearLayout>
+		    
+		    <Button android:id="@+id/btnSaldo"
+			    	android:layout_width="fill_parent"
+			    	android:layout_height="wrap_content"
+			    	android:text="Recargas"
+			    	/>
+			    
+		    <LinearLayout android:id="@+id/panelSaldo"
+			    		android:layout_width="fill_parent"
+			    		android:layout_height="wrap_content"
+			    		android:orientation="vertical">
+					
+		        	<TextView android:id="@+id/saldoActual" 
+		        	    	android:layout_width="fill_parent"
+		        	    	android:layout_height="wrap_content"/>
+		        	
+		        	<Button android:id="@+id/btn5k"
+		        	    	android:layout_height="wrap_content"
+		        	    	android:layout_width="fill_parent"
+		        	    	android:text="$5.000"
+		        	    	android:background="@color/silver"
+		        	    	android:layout_margin="10dp"/>
+		        	
+		        	<Button android:id="@+id/btn10k"
+		        	    	android:layout_height="wrap_content"
+		        	    	android:layout_width="fill_parent"
+		        	    	android:text="$10.000"
+		        	    	android:background="@color/silver"
+		        	    	android:layout_margin="10dp"/>
+		        	
+		        	<Button android:id="@+id/btn20k"
+		        	    	android:layout_height="wrap_content"
+		        	    	android:layout_width="fill_parent"
+		        	    	android:text="$20.000"
+		        	    	android:background="@color/silver"
+		        	    	android:layout_margin="10dp"/>
+		        	
+		    </LinearLayout>
+		
+		    <Button android:id="@+id/btnDatos"
+		        	android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:text="Datos de usuario"/>
+		    
+		    <LinearLayout android:id="@+id/panelDatos"
+		        	android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical">
+		        	
+		        <LinearLayout android:layout_width="fill_parent"
+		            	android:layout_height="wrap_content"
+		            	android:orientation="horizontal">
+		            
+		            <TextView android:layout_width="70dp"
+			                android:layout_height="wrap_content"
+			                android:text="Nombre: "/>
+		            
+		            <EditText android:id="@+id/editNombre"
+		                	android:layout_width="wrap_content"
+		                	android:layout_height="wrap_content"
+		                	android:singleLine="true"/>
+		            
+		        </LinearLayout>
+		        	
+		        <LinearLayout android:layout_width="fill_parent"
+		            	android:layout_height="wrap_content"
+		            	android:orientation="horizontal">
+		            
+		            <TextView android:layout_width="70dp"
+			                android:layout_height="wrap_content"
+			                android:text="Apellido: "/>
+		            
+		            <EditText android:id="@+id/editApellido"
+		                	android:layout_width="wrap_content"
+		                	android:layout_height="wrap_content"
+		                	android:singleLine="true"/>
+		            
+		        </LinearLayout>
+		        
+		        <LinearLayout android:layout_width="fill_parent"
+		            	android:layout_height="wrap_content"
+		            	android:orientation="horizontal">
+		            
+		            <TextView android:layout_width="70dp"
+			                android:layout_height="wrap_content"
+			                android:text="Telefono: "/>
+		            
+		            <EditText android:id="@+id/editTelefono"
+		                	android:layout_width="wrap_content"
+		                	android:layout_height="wrap_content"
+		                	android:singleLine="true"/>
+		            
+		        </LinearLayout>
+		        
+		       	<Button android:id="@+id/btnEditar"
+		       	    	android:layout_height="wrap_content"
+		       	    	android:layout_width="wrap_content"
+		       	    	android:text="Cambiar Datos"
+		       	    	android:layout_gravity="center_horizontal"
+		       	    	android:background="@color/silver"
+		       	    	android:layout_margin="5dp"
+		       	    	android:padding="10dp"/>
+		        
+		    </LinearLayout>
+		    
+		    <Button android:id="@+id/btnEliminar"
+		        	android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:background="@color/rojo"
+		        	android:text="Cancelar Suscribcion"	/>
+		    
+        </LinearLayout>
+        
+    <!-- </ScrollView> -->
+    
+	
+</LinearLayout>
